@@ -1,0 +1,24 @@
+{
+  "name": "frontend-project-lvl1",
+  "version": "0.0.1",
+  "description": "a set of simple command line games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasilyorlenko/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "hexlet",
+    "project",
+    "games"
+  ],
+  "author": "Vasily Orlenko <orlenko.vasily.p@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vasilyorlenko/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/vasilyorlenko/frontend-project-lvl1#readme"
+}
