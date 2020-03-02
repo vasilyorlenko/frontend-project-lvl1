@@ -1,11 +1,12 @@
 import readlineSync from 'readline-sync';
 
-const greetingPrompt = () => {
-  const name = readlineSync.question('May I have your name? ', {
-    defaultInput: 'Anonymous',
+const askName = () => {
+  const name = readlineSync.question('Welcome to the Brain Games!\n\nMay I have your name? ', {
+    defaultInput: 'anonymous',
   });
 
   console.log(`Hello, ${name}!`);
+  return name;
 };
 
-export default greetingPrompt;
+export default askName;
