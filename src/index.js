@@ -13,7 +13,7 @@ const getRandomIntegerFromRange = (min, max) => Math.floor(Math.random() * (max 
 
 const getAnswer = (currentValue) => readlineSync.question(`\nQuestion: ${currentValue}\nYour answer: `);
 
-const gameEngine = (gameData) => {
+const startGameEngine = (gameData) => {
   const { initialMessage, getRandomValue, getCorrectAnswer } = gameData;
   const playerName = getPlayerName();
 
@@ -41,7 +41,7 @@ const gameEngine = (gameData) => {
 };
 
 export {
-  gameEngine as default,
+  startGameEngine as default,
   getPlayerName,
   getRandomIntegerFromRange,
 };

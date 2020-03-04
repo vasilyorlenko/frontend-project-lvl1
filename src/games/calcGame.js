@@ -1,4 +1,4 @@
-import gameEngine, { getRandomIntegerFromRange } from '../index.js';
+import startGameEngine, { getRandomIntegerFromRange } from '../index.js';
 
 const initialMessage = 'What is the result of the expression?';
 
@@ -23,10 +23,10 @@ const getCorrectAnswer = (currentValue) => {
   return operations[operator](Number(a), Number(b));
 };
 
-const calcGame = () => {
+const beginCalcGame = () => {
   const calcGameData = { initialMessage, getRandomValue, getCorrectAnswer };
 
-  gameEngine(calcGameData);
+  startGameEngine(calcGameData);
 };
 
-export default calcGame;
+export default beginCalcGame;

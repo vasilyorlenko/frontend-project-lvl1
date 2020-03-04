@@ -1,4 +1,4 @@
-import gameEngine, { getRandomIntegerFromRange } from '../index.js';
+import startGameEngine, { getRandomIntegerFromRange } from '../index.js';
 
 const initialMessage = 'What number is missing in the progression?';
 
@@ -49,10 +49,10 @@ const getCorrectAnswer = (currentValue) => {
   return missingNumber;
 };
 
-const progressionGame = () => {
+const beginProgressionGame = () => {
   const progressionGameData = { initialMessage, getRandomValue, getCorrectAnswer };
 
-  gameEngine(progressionGameData);
+  startGameEngine(progressionGameData);
 };
 
-export default progressionGame;
+export default beginProgressionGame;
