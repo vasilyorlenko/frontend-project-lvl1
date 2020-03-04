@@ -5,7 +5,7 @@ const getPlayerName = () => {
     defaultInput: 'anonymous',
   });
 
-  console.log(`Hello, ${playerName}!`);
+  console.log(`\nHello, ${playerName}!`);
   return playerName;
 };
 
