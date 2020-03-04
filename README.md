@@ -4,7 +4,10 @@
 [![asciicast](https://asciinema.org/a/ysXkFADdsynOnecDINVz0BIaB.svg)](https://asciinema.org/a/ysXkFADdsynOnecDINVz0BIaB)
 
 ## step 6
-[![asciicast](https://asciinema.org/a/tAd3PbZEybMmy9RPthuB4Qzn3.svg)](https://asciinema.org/a/tAd3PbZEybMmy9RPthuB4Qzn3)
+[![asciicast](https://asciinema.org/a/gymQrKRP4xerpe6goNpriHq0y.svg)](https://asciinema.org/a/gymQrKRP4xerpe6goNpriHq0y)
 
 ## step 7
-[![asciicast](https://asciinema.org/a/wAbcNW0de1LcAMzwXVE9keHIE.svg)](https://asciinema.org/a/wAbcNW0de1LcAMzwXVE9keHIE)
+[![asciicast](https://asciinema.org/a/zQzw9VyQrkUrR70RmaNZW9gEK.svg)](https://asciinema.org/a/zQzw9VyQrkUrR70RmaNZW9gEK)
+
+## step 8
+[![asciicast](https://asciinema.org/a/lurFTDTXFKszhr5IQTn5zLDrM.svg)](https://asciinema.org/a/lurFTDTXFKszhr5IQTn5zLDrM)
