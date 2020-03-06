@@ -21,7 +21,7 @@ npm install
 game-even
 ```
 
-![game-even](demo/game-even.gif)
+<img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-even.gif" width="500" />
 
 ## Second game: calculator
 
@@ -29,7 +29,7 @@ game-even
 game-calc
 ```
 
-![game-calc](demo/game-calc.gif)
+<img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-calc.gif" width="500" />
 
 ## Third game: find greatest common divisor
 
@@ -37,7 +37,7 @@ game-calc
 game-gcd
 ```
 
-![game-gcd](demo/game-gcd.gif)
+<img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-gcd.gif" width="500" />
 
 ## Fourth game: is the number prime?
 
@@ -45,7 +45,7 @@ game-gcd
 game-prime
 ```
 
-![game-prime](demo/game-prime.gif)
+<img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-prime.gif" width="500" />
 
 ## Fifth game: find the missing number
 
@@ -53,4 +53,4 @@ game-prime
 game-progression
 ```
 
-![game-progression](game-progression.gif)
+<img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-progression.gif" width="500" />
