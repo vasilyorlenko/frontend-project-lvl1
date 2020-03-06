@@ -1,16 +1,56 @@
 # frontend-project-lvl1 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability) ![Node.js CI](https://github.com/vasilyorlenko/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg)
 
-## step 5
-[![asciicast](https://asciinema.org/a/ysXkFADdsynOnecDINVz0BIaB.svg)](https://asciinema.org/a/ysXkFADdsynOnecDINVz0BIaB)
+A set of simple command-line games.
 
-## step 6
-[![asciicast](https://asciinema.org/a/gymQrKRP4xerpe6goNpriHq0y.svg)](https://asciinema.org/a/gymQrKRP4xerpe6goNpriHq0y)
+To install, run:
 
-## step 7
-[![asciicast](https://asciinema.org/a/zQzw9VyQrkUrR70RmaNZW9gEK.svg)](https://asciinema.org/a/zQzw9VyQrkUrR70RmaNZW9gEK)
+```sh
+make install
+```
 
-## step 8
-[![asciicast](https://asciinema.org/a/lurFTDTXFKszhr5IQTn5zLDrM.svg)](https://asciinema.org/a/lurFTDTXFKszhr5IQTn5zLDrM)
+or
 
-## step 9
-[![asciicast](https://asciinema.org/a/Tmq8DaQCh0efaEEvTBvU87a3Q.svg)](https://asciinema.org/a/Tmq8DaQCh0efaEEvTBvU87a3Q)
+```sh
+npm install
+```
+
+
+## First game: is the number even?
+
+```sh
+game-even
+```
+
+![game-even](demo/game-even.gif)
+
+## Second game: calculator
+
+```sh
+game-calc
+```
+
+![game-calc](demo/game-calc.gif)
+
+## Third game: find greatest common divisor
+
+```sh
+game-gcd
+```
+
+![game-gcd](demo/game-gcd.gif)
+
+## Fourth game: is the number prime?
+
+```sh
+game-prime
+```
+
+![game-prime](demo/game-prime.gif)
+
+## Fifth game: find the missing number
+
+```sh
+game-progression
+```
+
+![game-progression](game-progression.gif)

@@ -9,15 +9,15 @@ const getRandomValue = () => {
   return `${a} ${b}`;
 };
 
+const getGreatestCommonDivisor = (a, b) => {
+  if (b === 0) {
+    return a;
+  }
+
+  return getGreatestCommonDivisor(b, a % b);
+};
+
 const getCorrectAnswer = (currentValue) => {
-  const getGreatestCommonDivisor = (a, b) => {
-    if (b === 0) {
-      return a;
-    }
-
-    return getGreatestCommonDivisor(b, a % b);
-  };
-
   const [a, b] = currentValue.split(' ');
 
   return getGreatestCommonDivisor(Number(a), Number(b));
