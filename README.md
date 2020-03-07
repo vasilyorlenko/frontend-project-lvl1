@@ -23,7 +23,7 @@ To run a game, execute its corresponding command:
 ## First game: is the number even?
 
 ```sh
-game-even
+brain-even
 ```
 
 <img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-even.gif" width="500" />
@@ -31,7 +31,7 @@ game-even
 ## Second game: calculator
 
 ```sh
-game-calc
+brain-calc
 ```
 
 <img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-calc.gif" width="500" />
@@ -39,7 +39,7 @@ game-calc
 ## Third game: find greatest common divisor
 
 ```sh
-game-gcd
+brain-gcd
 ```
 
 <img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-gcd.gif" width="500" />
@@ -47,7 +47,7 @@ game-gcd
 ## Fourth game: is the number prime?
 
 ```sh
-game-prime
+brain-prime
 ```
 
 <img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-prime.gif" width="500" />
@@ -55,7 +55,7 @@ game-prime
 ## Fifth game: find the missing number
 
 ```sh
-game-progression
+brain-progression
 ```
 
 <img src="https://github.com/vasilyorlenko/frontend-project-lvl1/blob/master/demo/game-progression.gif" width="500" />
