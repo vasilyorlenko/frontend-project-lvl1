@@ -2,18 +2,23 @@
 
 A set of simple command-line games.
 
-To install, run:
+# Installation
+
+Clone this repository to your computer:
 
 ```sh
-make install
+git clone https://github.com/vasilyorlenko/frontend-project-lvl1.git
 ```
 
-or
+Link the package:
 
 ```sh
-npm install
+npm link
 ```
 
+# Running
+
+To run a game, execute its corresponding command:
 
 ## First game: is the number even?
 
