@@ -2,8 +2,6 @@ import startGameEngine, { getRandomIntegerFromRange } from '../index.js';
 
 const initialMessage = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getRandomValue = () => getRandomIntegerFromRange(1, 99);
-
 const isPrime = (number) => {
   if (number < 2) {
     return false;
@@ -25,10 +23,8 @@ const isPrime = (number) => {
 
 const getCorrectAnswer = (currentValue) => (isPrime(currentValue) ? 'yes' : 'no');
 
-const beginPrimeGame = () => {
-  const primeGameData = { initialMessage, getRandomValue, getCorrectAnswer };
+const primeGameData = [initialMessage, getRandomIntegerFromRange, getCorrectAnswer];
 
-  startGameEngine(primeGameData);
-};
+const beginPrimeGame = () => startGameEngine(primeGameData);
 
 export default beginPrimeGame;
