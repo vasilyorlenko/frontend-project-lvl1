@@ -1,4 +1,5 @@
-# frontend-project-lvl1 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability) ![Node.js CI](https://github.com/vasilyorlenko/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg)
+# frontend-project-lvl1
+[![Maintainability](https://api.codeclimate.com/v1/badges/11fd6eec23ed8be38098/maintainability)](https://codeclimate.com/github/vasilyorlenko/frontend-project-lvl1/maintainability) ![Node.js CI](https://github.com/vasilyorlenko/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg)
 
 A set of simple command-line games.
 

@@ -1,6 +1,7 @@
-import startGameEngine, { getRandomIntegerFromRange } from '../index.js';
+import startGameEngine from '../index.js';
+import getRandomIntegerFromRange from '../utils.js';
 
-const initialMessage = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const getArithmeticProgression = (
   firstNumber,
@@ -24,8 +25,8 @@ const getArithmeticProgression = (
 };
 
 const getRandomArithmeticProgression = () => {
-  const firstNumber = getRandomIntegerFromRange();
-  const progressionStep = getRandomIntegerFromRange();
+  const firstNumber = getRandomIntegerFromRange(1, 99);
+  const progressionStep = getRandomIntegerFromRange(1, 99);
 
   const progression = getArithmeticProgression(firstNumber, progressionStep);
   const numberToMask = progression[getRandomIntegerFromRange(0, 9)];
@@ -58,7 +59,7 @@ const getCorrectAnswer = (currentValue) => {
   return missingNumber;
 };
 
-const progressionGameData = [initialMessage, getRandomArithmeticProgression, getCorrectAnswer];
+const progressionGameData = [description, getRandomArithmeticProgression, getCorrectAnswer];
 
 const beginProgressionGame = () => startGameEngine(progressionGameData);
 

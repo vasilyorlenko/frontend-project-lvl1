@@ -1,20 +1,14 @@
 import readlineSync from 'readline-sync';
 
-const getRandomIntegerFromRange = (min = 1, max = 99) => (
-  Math.floor(Math.random() * (max - min + 1)) + min
-);
-
-const poseAQuestionAndGetAnAnswer = (question, defaultAnswer = '') => readlineSync.question(question, {
-  defaultInput: defaultAnswer,
-});
-
 const startGameEngine = (gameData) => {
-  const [initialMessage, getRandomValue, getCorrectAnswer] = gameData;
+  const [description, getRandomValue, getCorrectAnswer] = gameData;
 
-  const playerName = poseAQuestionAndGetAnAnswer('May I have your name? ', 'anonymous');
+  const playerName = readlineSync.question('May I have your name? ', {
+    defaultInput: 'anonymous',
+  });
 
   console.log(`Hello, ${playerName}!`);
-  console.log(initialMessage);
+  console.log(description);
 
   const startNewRound = (count = 0) => {
     if (count > 2) {
@@ -26,7 +20,7 @@ const startGameEngine = (gameData) => {
 
     console.log(`Question: ${currentValue}`);
 
-    const currentAnswer = poseAQuestionAndGetAnAnswer('Your answer: ');
+    const currentAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = getCorrectAnswer(currentValue).toString();
 
     if (currentAnswer !== correctAnswer) {
@@ -41,4 +35,4 @@ const startGameEngine = (gameData) => {
   return startNewRound();
 };
 
-export { startGameEngine as default, getRandomIntegerFromRange };
+export default startGameEngine;
