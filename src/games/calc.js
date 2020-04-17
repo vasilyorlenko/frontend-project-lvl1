@@ -5,28 +5,21 @@ const description = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
 
-const getRandomExpression = () => {
-  const operator = operators[getRandomIntegerFromRange(0, 2)];
-  const a = getRandomIntegerFromRange(1, 99);
-  const b = getRandomIntegerFromRange(1, 99);
-
-  return `${a} ${operator} ${b}`;
-};
-
 const operations = {
   '+': (a, b) => a + b,
   '-': (a, b) => a - b,
   '*': (a, b) => a * b,
 };
 
-const getCorrectAnswer = (currentValue) => {
-  const [a, operator, b] = currentValue.split(' ');
-
-  return operations[operator](Number(a), Number(b));
+const getCalcGameData = () => {
+  const a = getRandomIntegerFromRange(1, 99);
+  const b = getRandomIntegerFromRange(1, 99);
+  const i = getRandomIntegerFromRange(0, 2);
+  const question = `${a} ${operators[i]} ${b}`;
+  const answer = operations[operators[i]](a, b).toString();
+  return { question, answer };
 };
 
-const calcGameData = [description, getRandomExpression, getCorrectAnswer];
-
-const beginCalcGame = () => startGameEngine(calcGameData);
+const beginCalcGame = () => startGameEngine(description, getCalcGameData);
 
 export default beginCalcGame;

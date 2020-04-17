@@ -3,64 +3,27 @@ import getRandomIntegerFromRange from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-const getArithmeticProgression = (
-  firstNumber,
-  progressionStep,
-  intendedLength = 10,
-  progression = [firstNumber],
-) => {
-  if (progression.length > intendedLength - 1) {
-    return progression;
+const getArithmeticProgression = (firstNumber, progressionStep, progressionLength) => {
+  const progression = []
+  for (let i = 0; i < progressionLength; i += 1) {
+    progression.push(firstNumber + i * progressionStep);
   }
-
-  const lastIndex = progression.length - 1;
-  const currentLastNumber = progression[lastIndex];
-
-  return getArithmeticProgression(
-    firstNumber,
-    progressionStep,
-    intendedLength,
-    [...progression, currentLastNumber + progressionStep],
-  );
+  return progression;
 };
 
-const getRandomArithmeticProgression = () => {
+const getProgressionGameData = () => {
   const firstNumber = getRandomIntegerFromRange(1, 99);
   const progressionStep = getRandomIntegerFromRange(1, 99);
-
-  const progression = getArithmeticProgression(firstNumber, progressionStep);
-  const numberToMask = progression[getRandomIntegerFromRange(0, 9)];
-
-  return progression
-    .map((number) => (number === numberToMask ? '..' : number.toString()))
+  const progressionLength = 10;
+  const progression = getArithmeticProgression(firstNumber, progressionStep, progressionLength);
+  const indexOfANumberToMask = getRandomIntegerFromRange(0, progressionLength - 1);
+  const question = progression
+    .map((num, i) => (i === indexOfANumberToMask ? '..' : num))
     .join(' ');
+  const answer = progression[indexOfANumberToMask].toString();
+  return { question, answer };
 };
 
-const getProgressionStep = (progression, i = 0, j = 1) => {
-  if (progression[i] !== '..' && progression[j] !== '..') {
-    return progression[j] - progression[i];
-  }
-
-  return getProgressionStep(progression, i + 2, j + 2);
-};
-
-const getCorrectAnswer = (currentValue) => {
-  const progression = currentValue
-    .split(' ')
-    .map((element) => (element !== '..' ? Number(element) : '..'));
-
-  const progressionStep = getProgressionStep(progression);
-  const placeholderIndex = progression.findIndex((element) => element === '..');
-
-  const missingNumber = placeholderIndex === 0
-    ? progression[placeholderIndex + 1] - progressionStep
-    : progression[placeholderIndex - 1] + progressionStep;
-
-  return missingNumber;
-};
-
-const progressionGameData = [description, getRandomArithmeticProgression, getCorrectAnswer];
-
-const beginProgressionGame = () => startGameEngine(progressionGameData);
+const beginProgressionGame = () => startGameEngine(description, getProgressionGameData);
 
 export default beginProgressionGame;

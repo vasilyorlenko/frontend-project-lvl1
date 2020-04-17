@@ -22,10 +22,13 @@ const isPrime = (number) => {
   return iter();
 };
 
-const getCorrectAnswer = (currentValue) => (isPrime(currentValue) ? 'yes' : 'no');
+const getPrimeGameData = () => {
+  const randNum = getRandomIntegerFromRange(1, 99);
+  const question = randNum.toString();
+  const answer = isPrime(randNum) ? 'yes' : 'no';
+  return { question, answer };
+};
 
-const primeGameData = [description, getRandomIntegerFromRange, getCorrectAnswer];
-
-const beginPrimeGame = () => startGameEngine(primeGameData);
+const beginPrimeGame = () => startGameEngine(description, getPrimeGameData);
 
 export default beginPrimeGame;

@@ -1,8 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const startGameEngine = (gameData) => {
-  const [description, getRandomValue, getCorrectAnswer] = gameData;
-
+const startGameEngine = (description, getGameData) => {
   const playerName = readlineSync.question('May I have your name? ', {
     defaultInput: 'anonymous',
   });
@@ -16,15 +14,14 @@ const startGameEngine = (gameData) => {
       return true;
     }
 
-    const currentValue = getRandomValue();
+    const { question, answer } = getGameData();
 
-    console.log(`Question: ${currentValue}`);
+    console.log(`Question: ${question}`);
 
-    const currentAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = getCorrectAnswer(currentValue).toString();
+    const playersAnswer = readlineSync.question('Your answer: ');
 
-    if (currentAnswer !== correctAnswer) {
-      console.log(`"${currentAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+    if (playersAnswer !== answer) {
+      console.log(`"${playersAnswer}" is wrong answer ;(. Correct answer was "${answer}".`);
       console.log(`Let's try again, ${playerName}!`);
       return false;
     }
