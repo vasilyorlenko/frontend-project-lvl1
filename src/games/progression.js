@@ -4,7 +4,7 @@ import getRandomIntegerFromRange from '../utils.js';
 const description = 'What number is missing in the progression?';
 
 const getArithmeticProgression = (firstNumber, progressionStep, progressionLength) => {
-  const progression = []
+  const progression = [];
   for (let i = 0; i < progressionLength; i += 1) {
     progression.push(firstNumber + i * progressionStep);
   }
