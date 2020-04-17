@@ -12,11 +12,13 @@ const getGreatestCommonDivisor = (a, b) => {
 };
 
 const getGcdGameData = () => {
-  const a = getRandomIntegerFromRange(1, 99);
-  const b = getRandomIntegerFromRange(1, 99);
-  const question = `${a} ${b}`;
-  const answer = getGreatestCommonDivisor(a, b).toString();
-  return { question, answer };
+  const randNumA = getRandomIntegerFromRange(1, 99);
+  const randNumB = getRandomIntegerFromRange(1, 99);
+  return {
+    question: `${randNumA} ${randNumB}`,
+    answer: getGreatestCommonDivisor(randNumA, randNumB)
+      .toString(),
+  };
 };
 
 const beginGcdGame = () => startGameEngine(description, getGcdGameData);

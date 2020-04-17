@@ -6,18 +6,20 @@ const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
 
 const operations = {
-  '+': (a, b) => a + b,
-  '-': (a, b) => a - b,
-  '*': (a, b) => a * b,
+  '+': (numA, numB) => numA + numB,
+  '-': (numA, numB) => numA - numB,
+  '*': (numA, numB) => numA * numB,
 };
 
 const getCalcGameData = () => {
-  const a = getRandomIntegerFromRange(1, 99);
-  const b = getRandomIntegerFromRange(1, 99);
-  const i = getRandomIntegerFromRange(0, 2);
-  const question = `${a} ${operators[i]} ${b}`;
-  const answer = operations[operators[i]](a, b).toString();
-  return { question, answer };
+  const randNumA = getRandomIntegerFromRange(1, 99);
+  const randNumB = getRandomIntegerFromRange(1, 99);
+  const randIndex = getRandomIntegerFromRange(0, 2);
+  return {
+    question: `${randNumA} ${operators[randIndex]} ${randNumB}`,
+    answer: operations[operators[randIndex]](randNumA, randNumB)
+      .toString(),
+  };
 };
 
 const beginCalcGame = () => startGameEngine(description, getCalcGameData);

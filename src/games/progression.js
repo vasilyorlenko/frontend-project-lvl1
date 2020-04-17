@@ -17,11 +17,10 @@ const getProgressionGameData = () => {
   const progressionLength = 10;
   const progression = getArithmeticProgression(firstNumber, progressionStep, progressionLength);
   const indexOfANumberToMask = getRandomIntegerFromRange(0, progressionLength - 1);
-  const question = progression
-    .map((num, i) => (i === indexOfANumberToMask ? '..' : num))
-    .join(' ');
-  const answer = progression[indexOfANumberToMask].toString();
-  return { question, answer };
+  return {
+    question: progression.map((num, i) => (i === indexOfANumberToMask ? '..' : num)).join(' '),
+    answer: progression[indexOfANumberToMask].toString(),
+  };
 };
 
 const beginProgressionGame = () => startGameEngine(description, getProgressionGameData);

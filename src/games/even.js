@@ -7,9 +7,10 @@ const isEven = (n) => n % 2 === 0;
 
 const getEvenGameData = () => {
   const randNum = getRandomIntegerFromRange(1, 99);
-  const question = randNum.toString();
-  const answer = isEven(randNum) ? 'yes' : 'no';
-  return { question, answer };
+  return {
+    question: randNum.toString(),
+    answer: isEven(randNum) ? 'yes' : 'no',
+  };
 };
 
 const beginEvenGame = () => startGameEngine(description, getEvenGameData);
