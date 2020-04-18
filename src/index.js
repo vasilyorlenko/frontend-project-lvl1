@@ -26,6 +26,8 @@ const startGameEngine = (description, getGameData) => {
       return false;
     }
 
+    console.log('Correct!');
+
     return startNewRound(count + 1);
   };
 
