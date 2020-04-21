@@ -8,8 +8,8 @@ const startGameEngine = (description, getGameData) => {
   console.log(`Hello, ${playerName}!`);
   console.log(description);
 
-  const startNewRound = (count = 0) => {
-    if (count > 2) {
+  const startNewRound = (count) => {
+    if (count === 3) {
       console.log(`Congratulations, ${playerName}!`);
       return true;
     }
@@ -31,7 +31,7 @@ const startGameEngine = (description, getGameData) => {
     return startNewRound(count + 1);
   };
 
-  return startNewRound();
+  return startNewRound(0);
 };
 
 export default startGameEngine;
